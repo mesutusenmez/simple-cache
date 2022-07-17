@@ -29,10 +29,10 @@ public class ImMemoryCacheTest {
     }
 
     @Test
-    public void test_putValueToCache_andThenBeforeAndAfter5secondsCompareExpectedValue() throws InterruptedException {
+    public void test_putValueToCache_andThenBeforeAndAfter3secondsCompareExpectedValue() throws InterruptedException {
         cache.put("value");
         assertEquals("value", cache.get());
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         assertEquals(null, cache.get());
     }
 

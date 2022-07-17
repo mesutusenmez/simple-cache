@@ -44,12 +44,12 @@ public class InMemoryCacheListTest {
     }
 
     @Test
-    public void test_putCacheToCacheList_andThenBeforeAndAfter5secondsCompareCacheListSize() throws InterruptedException {
+    public void test_putCacheToCacheList_andThenBeforeAndAfter3secondsCompareCacheListSize() throws InterruptedException {
         caches.put("key1", "value1");
         caches.put("key2", "value2");
         caches.put("key3", "value3");
         assertEquals(3, caches.size());
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         assertEquals(0, caches.size());
     }
 
