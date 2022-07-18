@@ -17,5 +17,16 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
+
+	<distributionManagement>
+		<repository>
+			<id>repo</id>
+			<url>file:///home/mesut/Belgeler/GitHub/mvn-repo/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>repo-snapshots</id>
+			<url>file:///home/mesut/Belgeler/GitHub/mvn-repo/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+		
 </project>
