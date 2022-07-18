@@ -5,7 +5,16 @@ A simple caching app based java. Implemented for memory cache but you can implem
 
 ## How to use
 
-1. Add the following maven dependency:
+1. Add the following maven repository and dependency to pom.xml:
+
+		<repositories>
+		  <repository>
+		    <id>mu-repo</id>
+		    <url>https://github.com/mesutusenmez/mvn-repo/tree/main/snapshots</url>
+		  </repository>
+		</repositories>
+		
+
 
 		<dependency>
 			<groupId>com.example</groupId>
