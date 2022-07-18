@@ -21,6 +21,7 @@ public final class InMemoryCache<T> implements Cache<T> {
      * @param timeToLive time of cache object to live
      */
     public InMemoryCache(long timeToLive) {
+
         long expireTime  = System.currentTimeMillis() + timeToLive;
 
         if(timeToLive > 0) {
@@ -54,7 +55,6 @@ public final class InMemoryCache<T> implements Cache<T> {
     public void put(T value) {
         cache.set(new SoftReference<T>(value));
     }
-
 
     /**
      * get the value in cache

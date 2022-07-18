@@ -80,7 +80,6 @@ public final class InMemoryCacheList<K, T> implements CacheList<K, T> {
         caches.remove(key);
     }
 
-
     /**
      * clear all caches in cache list
      */

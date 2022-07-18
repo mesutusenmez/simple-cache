@@ -9,7 +9,6 @@ public class ImMemoryCacheTest {
     
     private Cache<String> cache;
 
-
     @Before
     public void setUp() {
         cache = new InMemoryCache<>(2000);
