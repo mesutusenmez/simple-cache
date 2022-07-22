@@ -24,7 +24,7 @@ A simple caching app based java. Implemented for memory cache but you can implem
 
 2. Create a single cache(expire time is 30 sec)
 
-        Cache<String> cache = new InMemoryCache<>(30);
+        SingleCache<String> cache = new InMemoryCache<>(30);
         
 3. Put a value to the single cache
 
