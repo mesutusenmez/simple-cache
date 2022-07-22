@@ -37,4 +37,21 @@ public class ImMemoryCacheTest {
         assertEquals(null, cache.get());
     }
 
+    @Test
+    public void test_putManyValues_andThenBeforeAndAfter3secondsCompareExpectedValue() throws InterruptedException {
+        cache.put("value");
+        assertEquals("value", cache.get());
+        Thread.sleep(1500);
+        cache.put("value");
+        assertEquals("value", cache.get());
+        Thread.sleep(1500);
+        cache.put("value");
+        assertEquals("value", cache.get());
+        Thread.sleep(1500);
+        cache.get();
+        assertEquals("value", cache.get());
+        Thread.sleep(3000);
+        assertEquals(null, cache.get());
+    }
+
 }

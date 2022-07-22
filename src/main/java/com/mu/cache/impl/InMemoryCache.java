@@ -37,6 +37,7 @@ public final class InMemoryCache<T> implements SingleCache<T> {
     @Override
     public void put(T value) {
         cache.set(new SoftReference<T>(value));
+        cacheTimer.extendExpireTime();
     }
 
     /**
@@ -46,7 +47,11 @@ public final class InMemoryCache<T> implements SingleCache<T> {
      */
     @Override
     public T get() {
-        if(cache.get() == null) return null;
+        if(cache.get() == null) {
+            return null;
+        }
+
+        cacheTimer.extendExpireTime();
         return cache.get().get();
     }
 
