@@ -1,17 +1,19 @@
-package com.example;
+package com.mu.cache.impl;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
 
+import com.mu.cache.base.CacheList;
+
 public class InMemoryCacheListTest {
     
-    private CacheList<String, String> caches;
+    private CacheList<String> caches;
 
     @Before
     public void setUp() {
-        caches = new InMemoryCacheList<>(2000);
+        caches = new InMemoryCacheList<>(2);
     }
 
     @Test

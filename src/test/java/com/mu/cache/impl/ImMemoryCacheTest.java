@@ -1,17 +1,19 @@
-package com.example;
+package com.mu.cache.impl;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
 
+import com.mu.cache.base.SingleCache;
+
 public class ImMemoryCacheTest {
     
-    private Cache<String> cache;
+    private SingleCache<String> cache;
 
     @Before
     public void setUp() {
-        cache = new InMemoryCache<>(2000);
+        cache = new InMemoryCache<>(2);
     }
 
     @Test
@@ -23,7 +25,7 @@ public class ImMemoryCacheTest {
     @Test
     public void test_removeValueFromCache_andThenCompareExpectedValue() {
         cache.put("value");
-        cache.remove();
+        cache.clear();
         assertEquals(null, cache.get());
     }
 
