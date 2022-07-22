@@ -17,14 +17,14 @@ A simple caching app based java. Implemented for memory cache but you can implem
 
 
 		<dependency>
-			<groupId>com.example</groupId>
+			<groupId>com.mu.cache</groupId>
 			<artifactId>simple-cache</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<version>1.0.1-SNAPSHOT</version>
 		</dependency>
 
 2. Create a single cache(expire time is 30 sec)
 
-        Cache<String> cache = new InMemoryCache<>(30000);
+        Cache<String> cache = new InMemoryCache<>(30);
         
 3. Put a value to the single cache
 
@@ -40,7 +40,7 @@ A simple caching app based java. Implemented for memory cache but you can implem
         
 6. Create a cache list(expire time is 30 sec)
 
-        CacheList<String, String> caches = new InMemoryCacheList<>(30000);
+        CacheList<String, String> caches = new InMemoryCacheList<>(30);
         
 7. Put some values to the cache list
 
