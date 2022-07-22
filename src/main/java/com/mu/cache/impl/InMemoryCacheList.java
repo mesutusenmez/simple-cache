@@ -38,6 +38,7 @@ public final class InMemoryCacheList<T> implements CacheList<T> {
     @Override
     public void put(String key, T value) {
         caches.put(key, new SoftReference<T>(value));
+        cacheTimer.extendExpireTime();
     }
 
     /**
@@ -51,6 +52,7 @@ public final class InMemoryCacheList<T> implements CacheList<T> {
         if(caches.get(key) == null) {
             return null;
         }
+        cacheTimer.extendExpireTime();
         return caches.get(key).get();
     }
 
