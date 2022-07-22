@@ -40,7 +40,7 @@ A simple caching app based java. Implemented for memory cache but you can implem
         
 6. Create a cache list(expire time is 30 sec)
 
-        CacheList<String, String> caches = new InMemoryCacheList<>(30);
+        CacheList<String> caches = new InMemoryCacheList<>(30);
         
 7. Put some values to the cache list
 
