@@ -34,9 +34,9 @@ A simple caching app based java. Implemented for memory cache but you can implem
 
         String cacheVal = cache.get();
         
-5. Remove the single cache
+5. Clear the single cache
 
-        cache.remove();
+        cache.clear();
         
 6. Create a cache list(expire time is 30 sec)
 
