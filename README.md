@@ -30,8 +30,8 @@ A simple caching app based java. Implemented for memory cache but you can implem
 		</dependency>
 
 2. Create a single cache(expire time is 30 sec)
-
-        SingleCache<String> cache = new InMemoryCache<>(30);
+        Config config = new Config.ConfigBuilder(30).build();
+        SingleCache<String> cache = new InMemoryCache<>(config);
         
 3. Put a value to the single cache
 
@@ -46,8 +46,8 @@ A simple caching app based java. Implemented for memory cache but you can implem
         cache.clear();
         
 6. Create a cache list(expire time is 30 sec)
-
-        CacheList<String> caches = new InMemoryCacheList<>(30);
+        Config config = new Config.ConfigBuilder(30).build();
+        CacheList<String> caches = new InMemoryCacheList<>(config);
         
 7. Put some values to the cache list
 
