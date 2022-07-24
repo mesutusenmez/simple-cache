@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mu.cache</groupId>
 	<artifactId>simple-cache</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.2-SNAPSHOT</version>
 	<properties>
 		<java.version>11</java.version>
     	<maven.compiler.source>${java.version}</maven.compiler.source>
