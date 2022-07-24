@@ -3,6 +3,7 @@ import java.lang.ref.SoftReference;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.mu.cache.base.CacheList;
+import com.mu.cache.configuration.Config;
 import com.mu.cache.deamon.CacheTimer;
 
 /**
@@ -24,8 +25,8 @@ public final class InMemoryCacheList<T> implements CacheList<T> {
      * 
      * @param timeToLive time of caches to live
      */
-    public InMemoryCacheList(int timeToLive) {
-        cacheTimer = new CacheTimer<>(this, timeToLive);
+    public InMemoryCacheList(Config config) {
+        cacheTimer = new CacheTimer<>(this, config.getTimeToLive());
         cacheTimer.start();
     }
 

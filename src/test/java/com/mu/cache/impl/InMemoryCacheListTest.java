@@ -6,14 +6,18 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.mu.cache.base.CacheList;
+import com.mu.cache.configuration.Config;
 
 public class InMemoryCacheListTest {
     
     private CacheList<String> caches;
 
+    private Config config;
+
     @Before
     public void setUp() {
-        caches = new InMemoryCacheList<>(2);
+        config = new Config.ConfigBuilder(2).build();
+        caches = new InMemoryCacheList<>(config);
     }
 
     @Test

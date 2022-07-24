@@ -6,14 +6,18 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.mu.cache.base.SingleCache;
+import com.mu.cache.configuration.Config;
 
 public class ImMemoryCacheTest {
     
     private SingleCache<String> cache;
 
+    private Config config;
+
     @Before
     public void setUp() {
-        cache = new InMemoryCache<>(2);
+        config = new Config.ConfigBuilder(2).build();
+        cache = new InMemoryCache<>(config);
     }
 
     @Test
