@@ -3,6 +3,7 @@ package com.mu.cache.impl;
 import java.lang.ref.SoftReference;
 import java.util.concurrent.atomic.AtomicReference;
 import com.mu.cache.base.SingleCache;
+import com.mu.cache.configuration.Config;
 import com.mu.cache.deamon.CacheTimer;
 
 /**
@@ -24,8 +25,8 @@ public final class InMemoryCache<T> implements SingleCache<T> {
      * 
      * @param timeToLive time(sec) of cache object to live
      */
-    public InMemoryCache(int timeToLive) {
-        cacheTimer = new CacheTimer<>(this, timeToLive);
+    public InMemoryCache(Config config) {
+        cacheTimer = new CacheTimer<>(this, config.getTimeToLive());
         cacheTimer.start();
     }
 
