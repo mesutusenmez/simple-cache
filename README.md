@@ -26,7 +26,7 @@ A simple caching app based java. Implemented for memory cache but you can implem
 		<dependency>
 			<groupId>com.mu.cache</groupId>
 			<artifactId>simple-cache</artifactId>
-			<version>1.0.1-SNAPSHOT</version>
+			<version>1.0.2-SNAPSHOT</version>
 		</dependency>
 
 2. Create a single cache(expire time is 30 sec)
