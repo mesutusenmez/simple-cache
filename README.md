@@ -3,6 +3,13 @@
 A simple caching app based java. Implemented for memory cache but you can implement this for different cache types.
 
 
+## UML Class Diagram
+
+<p align="left">
+  <img src="https://github.com/mesutusenmez/simple-cache/blob/main/src/main/resources/simple-cache-uml.jpg" width="70%" title="hover text">
+</p>
+
+
 ## How to use
 
 1. Add the following maven repository and dependency to pom.xml:
